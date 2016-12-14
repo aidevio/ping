@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Ping configuration</title>
+    <style type="text/css">
+    body span{display: block;}
+    </style>
+    <script type="text/javascript">
+      let ipc = require('electron').ipcRenderer;
+      let config = ipc.sendSync('getSettings');
+      window.onload = () => {
+        document.querySelector('[name="url"]').addEventListener('keyup', function(e) {
+          ipc.sendSync('setConfig', 'url', this.value);
+        });
+        document.querySelector('[name="interval"]').addEventListener('keyup', function(e) {
+          ipc.sendSync('setConfig', 'interval', this.value);
+        });
+
+        if(config.url){
+          document.querySelector('[name="url"]').value = config.url;
+        }
+        if(config.interval){
+          document.querySelector('[name="interval"]').value = config.interval;
+        }
+      }
+    </script>
+  </head>
+  <body>
+  	<center><strong>Configure server to ping</strong></center>
+  	<span>Ping url *</span><input type="text" name="url"><br>
+  	<span>Ping interval *</span><input type="text" name="interval" value="5000"><br><br>
+  	<center>
+      <b>* All values saving automatially.</b>
+      <em>Ping will start authomatically after save and close settings.</em>
+    </center>
+  </body>
+</html>

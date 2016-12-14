@@ -1,0 +1,32 @@
+{
+  "name": "ping",
+  "version": "1.0.0",
+  "description": "Ping for aidev.io",
+  "main": "main.js",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "electron": "^1.4.12",
+    "electron-builder": "^10.7.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "./node_modules/.bin/electron",
+    "build": "./node_modules/.bin/build"
+  },
+  "author": "",
+  "license": "ISC",
+  "build": {
+    "appId": "ping",
+    "win": {
+      "icon": "ping",
+      "iconUrl": "file:///D:/PROJECTS/ftp/ping/app/ping.ico",
+      "target": "zip"
+    }
+  },
+  "directories": {
+    "buildResources": "../build",
+    "app": "./",
+    "output": "../release"
+  }
+}
