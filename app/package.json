@@ -1,7 +1,7 @@
 {
   "name": "ping",
   "version": "1.0.0",
-  "description": "Ping for aidev.io",
+  "description": "Ping",
   "main": "main.js",
   "dependencies": {
   },
@@ -20,7 +20,7 @@
     "appId": "ping",
     "win": {
       "icon": "ping",
-      "iconUrl": "file:///D:/PROJECTS/ftp/ping/app/ping.ico",
+      "iconUrl": "https://github.com/aidevio/ping/raw/master/app/ping.ico",
       "target": "zip"
     }
   },
