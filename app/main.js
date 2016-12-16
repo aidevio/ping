@@ -90,6 +90,8 @@ function ping(){
 			if(res.statusCode != 200)
 				file.write(new Date().toLocaleString('ru-RU') + ' - ' + res.statusCode + '\r\n');
 			res.resume();
+		}).on('error', e => {
+			file.write(new Date().toLocaleString('ru-RU') + ' - ERROR: ' + e + '\r\n');
 		});
 	}, settings.interval || 5000);
 }
