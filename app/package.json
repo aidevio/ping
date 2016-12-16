@@ -1,10 +1,9 @@
 {
   "name": "ping",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Ping",
   "main": "main.js",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "electron": "^1.4.12",
     "electron-builder": "^10.7.0"
